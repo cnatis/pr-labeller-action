@@ -1,0 +1,11 @@
+name: 'PR Labeller'
+description: 'Label PRs based on tags that contain the PRs merge commit'
+inputs:
+  repo-token:
+    description: 'The GITHUB_TOKEN secret'
+  dry-run:
+    description: 'If true no modifications will be made'
+    required: false
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
